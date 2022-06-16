@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela', sans-serif;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('./image/Mercedes-Benz_S-Class_2020_V223_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 45px;
+    color: #fff;
+    text-decoration: none;
+    padding: 50px 80px;
+    border: 3px solid rgb(104, 100, 100);
+}
+.button:hover {
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
+}
+
+.show-btn {
+    background-color: #74787b;
+    opacity: 0.8;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.5s;
+}
+
+.show-btn:hover {
+    background-color: #626467;
+    opacity: 0.8;
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    color: #222;
+    font-size: 20px;
+}
+
+.modal-title {
+    margin-bottom: 15px;
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
